@@ -1,6 +1,6 @@
-package com.example.prometheus.system.service;
+package com.example.prometheus.service;
 
-import com.example.prometheus.system.integration.LogicRequestService;
+import com.example.prometheus.integration.LogicRequestService;
 import com.example.prometheus.util.RandomUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

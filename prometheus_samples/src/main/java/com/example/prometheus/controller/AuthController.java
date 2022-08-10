@@ -1,6 +1,6 @@
-package com.example.prometheus.system.controller;
+package com.example.prometheus.controller;
 
-import com.example.prometheus.system.service.AuthService;
+import com.example.prometheus.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package com.example.prometheus.system.service;
+package com.example.prometheus.service;
 
 import org.springframework.http.ResponseEntity;
 

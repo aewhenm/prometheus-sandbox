@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 management:
   endpoints:
     web:
@@ -16,6 +19,6 @@ management:
 
 integration:
   keycloak:
-    url: ${KEYCLOACK_URL:http://localhost:8081/out/api/keycloak}
+    url: ${KEYCLOACK_URL:http://localhost:8080/out/api/keycloak}
   logic:
-    url: ${LOGIC_URL:http://localhost:8081/out/api/logic}
+    url: ${LOGIC_URL:http://localhost:8080/out/api/logic}

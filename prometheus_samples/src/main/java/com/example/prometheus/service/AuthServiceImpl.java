@@ -1,4 +1,4 @@
-package com.example.prometheus.system.service;
+package com.example.prometheus.service;
 
 import com.example.prometheus.util.RandomUtils;
 import org.springframework.http.HttpStatus;

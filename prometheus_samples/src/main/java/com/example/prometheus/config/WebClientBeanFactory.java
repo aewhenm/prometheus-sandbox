@@ -1,4 +1,4 @@
-package com.example.prometheus.system.config;
+package com.example.prometheus.config;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;

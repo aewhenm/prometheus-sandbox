@@ -1,4 +1,4 @@
-package com.example.prometheus.system.integration;
+package com.example.prometheus.integration;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -6,21 +6,21 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
 @RequiredArgsConstructor
-public class KeycloakRequestService {
+public class LogicRequestService {
 
     private final WebClient logicWebClient;
 
-    public String sync(Long id) {
+    public String getSomeInfoById(Long id) {
         return logicWebClient.get()
-            .uri("/sync/{id}", uriBuilder -> uriBuilder.build(id))
+            .uri("/{id}", uriBuilder -> uriBuilder.build(id))
             .retrieve()
             .bodyToMono(String.class)
             .block();
     }
 
-    private String getDetails() {
+    public String getDetails(Long id) {
         return logicWebClient.get()
-            .uri("/authorize")
+            .uri("/details")
             .retrieve()
             .bodyToMono(String.class)
             .block();
