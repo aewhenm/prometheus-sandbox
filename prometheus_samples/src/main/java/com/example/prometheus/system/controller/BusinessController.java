@@ -1,7 +1,7 @@
 package com.example.prometheus.system.controller;
 
-import com.example.prometheus.util.RandomUtils;
-import org.springframework.http.HttpStatus;
+import com.example.prometheus.system.service.BusinessService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,21 +11,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api/business")
+@RequiredArgsConstructor
 public class BusinessController {
+
+    private final BusinessService businessService;
 
     @PostMapping
     public ResponseEntity createNew() {
-        return new ResponseEntity(HttpStatus.valueOf(RandomUtils.generateHttpStatus()));
+        return businessService.createNew();
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity getInfo(@PathVariable Long id) {
-        return new ResponseEntity(HttpStatus.valueOf(RandomUtils.generateHttpStatus()));
+        return businessService.getInfo(id);
     }
 
     @GetMapping(value = "/details")
     public ResponseEntity getDetails() {
-        return new ResponseEntity(HttpStatus.valueOf(RandomUtils.generateHttpStatus()));
+        return businessService.getDetails();
     }
 
 }
