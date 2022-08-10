@@ -8,16 +8,18 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 
+@Configuration
 public class WebClientBeanFactory {
 
-    @Value(value = "integration.keycloak.url")
+    @Value("${integration.keycloak.url}")
     private String keycloakUrl;
 
-    @Value(value = "integration.logic.url")
+    @Value("${integration.logic.url}")
     private String logicUrl;
 
     @Bean
