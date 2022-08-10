@@ -13,3 +13,7 @@ management:
     export:
       prometheus:
         enabled: true
+
+integration:
+  keycloak.url: ${KEYCLOACK_URL:http://localhost:8080/out/keycloak}
+  logic.url: ${LOGIC_URL:http://localhost:8080/out/logic}
